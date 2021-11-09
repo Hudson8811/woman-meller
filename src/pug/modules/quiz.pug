@@ -1,0 +1,21 @@
+section.quiz
+  .quiz__container.container 
+    .quiz__intro Мы предлагаем вам проверить себя: насколько сбалансированно вы питаетесь и получаете ли необходимое количество Омега-3 с пищей? По итогам теста мы расскажем, какое количество Омега-3 необходимо именно вам и откуда вы можете их получить
+
+    .quiz__form 
+      .quiz__hint Давайте познакомимся: как вас зовут?
+      label.quiz__field(aria-label="Ваше имя")
+        input(type="text", name="name")
+      
+      button.quiz__btn(type="button") Играть
+    
+    .quiz__main
+      .question
+        .question__main
+          .question__title
+            span.question__title-number 1
+            span.question__title-text Как вы можете оценить свой образ жизни?
+          
+          +custom-radio('answer', page.answers, 1, 'question__answers')
+        .question__image 
+          img(src="images/quiz/question-1.jpg", width="608", height="487", alt="")

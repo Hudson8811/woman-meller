@@ -1,0 +1,28 @@
+.hero {
+  position: relative;
+  padding-top: 76px;
+  padding-bottom: 316px;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: 100% auto;
+  background-image: url("../images/hero/hero-bg.png");
+
+  @include max(xxl) {
+    padding-top: vw(76);
+    padding-bottom: vw(316);
+  }
+
+  @include retina {
+    background-image: url("../images/hero/hero-bg@2x.png");
+  }
+
+  @include max(sm) {
+    padding-top: vw(226, 414);
+    padding-bottom: vw(28, 414);
+    background-image: url("../images/hero/hero-bg-mobile.jpg");
+
+    @include retina {
+      background-image: url("../images/hero/hero-bg-mobile@2x.jpg");
+    }
+  }
+}

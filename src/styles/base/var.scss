@@ -1,0 +1,35 @@
+/* media */
+$media-list: (
+  "xxs": 375,
+  "xs": 560,
+  "sm": 767,
+  "md": 1079,
+  "lg": 1279,
+  "xl": 1599,
+  "xxl": 1900,
+);
+
+/* шрифты */
+$mainFont: "HelveticaNeueCyr", "Helvetica", sans-serif;
+
+/* цвета */
+$white: #ffffff;
+$black: #000000;
+
+$green-05: #056b38;
+$green-06: #06672f;
+$green-84: #84ce64;
+
+$gold: #e7ca77;
+$cream: #feeeca;
+$light: #fff9ed;
+
+$dark: #4d4d4d;
+
+$textMainColor: $dark;
+
+// Retina
+//---------------------------------
+
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;

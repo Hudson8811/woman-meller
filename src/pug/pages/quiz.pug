@@ -1,0 +1,58 @@
+extends ../layouts/default
+
+block vars
+  -
+    const page = {
+      title: 'Тест: Как выглядит ваш идеальный комплект белья?',
+      isQuiz: true
+    };
+
+block main
+  section.quiz.quiz--q1
+    .quiz__top
+      a.quiz__to-home(href="index.html") Вернуться назад
+    header.quiz__header 
+      h2.quiz__title.title <span>Тест:</span> Как выглядит ваш идеальный комплект белья?
+      .quiz__text Правильное белье должно не просто идеально сидеть, но еще и соответствовать вашему образу жизни, стилю и представлениям о прекрасном. Ответьте на несколько вопросов и узнайте, какое нижнее белье вам подходит.
+    .quiz__wrapper 
+      .quiz__inner 
+      .quiz__social.social
+        a.social__item.vk(href="")
+          svg
+            use(xlink:href="images/sprite.svg#soc-vk")
+        a.social__item.ok(href="")
+          svg
+            use(xlink:href="images/sprite.svg#soc-ok")
+        a.social__item.fb(href="")
+          svg
+            use(xlink:href="images/sprite.svg#soc-fb")
+        a.social__item.tw(href="")
+          svg
+            use(xlink:href="images/sprite.svg#soc-tw")
+      //-h3.quiz__question.title(style="display: none;") 1. Что вам нравится делать в свободное время больше всего?
+
+      //-.quiz__answers(style="display: none;")
+        label.quiz__answer
+          input.visually-hidden(type="radio", name="q1", value="sport")
+          span.quiz__answer-text 
+            span Играть в подвижные игры с детьми
+        label.quiz__answer
+          input.visually-hidden(type="radio", name="q1", value="comfort")
+          span.quiz__answer-text 
+            span Проводить уютные выходные в постели с любимой книгой или сериалом
+        label.quiz__answer
+          input.visually-hidden(type="radio", name="q1", value="grace")
+          span.quiz__answer-text 
+            span Встречаться с друзьями, ходить с ними на выставки и в рестораны
+      
+      //-.quiz__result(style="display: none;")
+        .quiz__result-image 
+          img(src="images/quiz/result-1.jpg", srcset="images/quiz/result-1@2x.jpg 2x", width="400", height="474", alt="")
+        .quiz__result-content 
+          h3.quiz__result-title.title Результат
+          .quiz__result-text Вы динамичная, стремительная, яркая и стараетесь вести активный образ жизни. А потому вам идеально подходит нижнее белье со спортивным характером. Ваш вариант — укороченный топ без замков и застежек, как в коллекции FlexiFit от Marks & Spencer. Его удобно надевать, и он практически не заметен под одеждой благодаря гладким краям. Бра имеет специальную гелевую подкладку, которая обеспечивает комфорт и хорошую поддержку груди в течение активного дня.
+        .quiz__result-action
+          button.quiz__btn.__js_again(type="button") Пройти еще раз
+          button.quiz__btn.__js_more-result(type="button") Еще результат
+      
+    .quiz__overlay.shown

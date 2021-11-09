@@ -1,0 +1,27 @@
+.title {
+  font-size: 64px;
+  line-height: 1;
+  color: $white;
+  font-weight: 400;
+  letter-spacing: 0;
+
+  @include max(xxl) {
+    font-size: vw(64);
+  }
+
+  @include max(sm) {
+    font-size: vw(36, 414);
+  }
+
+  &--small {
+    font-size: 48px;
+
+    @include max(xxl) {
+      font-size: vw(48);
+    }
+
+    @include max(sm) {
+      font-size: vw(36, 414);
+    }
+  }
+}

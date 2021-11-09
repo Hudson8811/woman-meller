@@ -1,0 +1,29 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  padding-top: 90px;
+
+  @include max(xxl) {
+    padding-top: vw(90);
+  }
+
+  @include max(sm) {
+    padding-top: vw(29, 414);
+  }
+
+  &__container {
+    @include max(xxl) {
+      max-width: vw(1824);
+    }
+
+    @include max(xxl) {
+      max-width: none;
+    }
+  }
+
+  &__logo {
+  }
+}

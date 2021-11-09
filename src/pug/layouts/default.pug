@@ -1,0 +1,38 @@
+doctype html
+
+block vars
+include vars
+include ../components/_mixins
+
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1")
+		meta(name="description" content="")
+		meta(name="keywords" content="")
+		
+		each it in resultImages
+			link(rel="prefetch prerender", href="images/quiz/" + it)
+			
+		link(href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet")
+		link(href="css/main.min.css" rel="stylesheet")
+
+		title= `${page.title}`
+
+	body
+		block header
+			if !page.isQuiz
+				include ../partials/_header
+
+		main.main
+			block main
+
+		block footer
+			include ../partials/_footer
+
+		block modals
+
+		script(src="https://unpkg.com/aos@2.3.1/dist/aos.js")
+		script(src="js/main.min.js")
+
+		block scripts

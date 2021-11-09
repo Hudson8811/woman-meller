@@ -1,0 +1,13 @@
+extends ../layouts/default
+
+block vars
+	-
+		const page = {
+			title: 'Жиры, которые нам нужны',
+			answers: ['A.	Сознательно веду здоровый образ жизни', 'B.	Стараюсь придерживаться правил ЗОЖ, но получается не всегда', 'C.	Не соблюдаю никакие нормы, живу так, как чувствую']
+		};
+
+block main
+	include ../modules/hero
+	include ../modules/intro
+	include ../modules/quiz
