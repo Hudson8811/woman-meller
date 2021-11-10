@@ -4,26 +4,35 @@
   left: 0;
   z-index: 1;
   width: 100%;
-  padding-top: 90px;
+  height: 230px;
+  padding-top: 87px;
+  background-repeat: no-repeat;
+  background-position: left 55.5% bottom 0;
+  background-size: 3059px 374px;
+  background-image: url("../images/header-bg.svg");
 
-  @include max(xxl) {
-    padding-top: vw(90);
+  @include max(xl) {
+    background-position: left 54% bottom 0;
+    background-size: vw(3059, 1440) vw(374, 1440);
+    height: vw(230, 1440);
+    padding-top: vw(87, 1440);
   }
 
   @include max(sm) {
-    padding-top: vw(29, 414);
+    //padding-top: vw(29, 414);
   }
 
   &__container {
-    @include max(xxl) {
+    /*@include max(xxl) {
       max-width: vw(1824);
-    }
-
-    @include max(xxl) {
-      max-width: none;
-    }
+    }*/
   }
 
   &__logo {
+    margin-left: 147px;
+
+    @include max(xl) {
+      margin-left: vw(147, 1440);
+    }
   }
 }

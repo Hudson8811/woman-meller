@@ -1,28 +1,96 @@
 .hero {
   position: relative;
-  padding-top: 76px;
-  padding-bottom: 316px;
+  display: flex;
+  height: 1128px;
+  padding-top: 146px;
+  padding-bottom: 0;
   background-repeat: no-repeat;
   background-position: 50% 0;
-  background-size: 100% auto;
-  background-image: url("../images/hero/hero-bg.png");
+  background-size: cover;
+  background-image: url("../images/hero.jpg");
+  border-bottom: solid 4px $gold;
 
-  @include max(xxl) {
-    padding-top: vw(76);
-    padding-bottom: vw(316);
+  @include max(xl) {
+    height: vw(1128, 1440);
+    padding-top: vw(146, 1440);
+    border-bottom-width: vw(4, 1440);
+    background-position: 50% 0;
   }
 
-  @include retina {
-    background-image: url("../images/hero/hero-bg@2x.png");
-  }
-
-  @include max(sm) {
+  /*@include max(sm) {
     padding-top: vw(226, 414);
     padding-bottom: vw(28, 414);
     background-image: url("../images/hero/hero-bg-mobile.jpg");
 
     @include retina {
       background-image: url("../images/hero/hero-bg-mobile@2x.jpg");
+    }
+  }*/
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__title {
+    width: 100%;
+    max-width: 482px;
+    margin-left: auto;
+    font-size: 120px;
+    line-height: 1;
+    color: $green-05;
+    font-weight: 400;
+    text-transform: uppercase;
+
+    @include max(xl) {
+      max-width: vw(482, 1440);
+      font-size: vw(120, 1440);
+    }
+
+    span {
+      display: block;
+      margin: -21px 0 -3px;
+      font-size: 80px;
+      line-height: 1;
+      font-weight: 200;
+      text-transform: lowercase;
+
+      @include max(xl) {
+        margin: vw(-21, 1440) 0 vw(-3, 1440);
+        font-size: vw(80, 1440);
+      }
+    }
+  }
+
+  &__tags {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: auto;
+  }
+
+  &__tag {
+    width: 100%;
+    max-width: 303px;
+    margin: 0 5px;
+    padding: 22px 9px 16px;
+    font-size: 16px;
+    line-height: 1;
+    color: $green-06;
+    letter-spacing: 0.7em;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: rgba($gold, 0.7);
+
+    span {
+      margin-right: -0.7em;
+    }
+
+    @include max(xl) {
+      max-width: vw(303, 1440);
+      margin: 0 vw(5, 1440);
+      padding: vw(22, 1440) vw(9, 1440) vw(16, 1440);
+      font-size: vw(16, 1440);
     }
   }
 }

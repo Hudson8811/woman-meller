@@ -1,2 +1,69 @@
 .intro {
+  position: relative;
+  padding-top: 102px;
+  padding-bottom: 409px;
+
+  @include max(xl) {
+    padding-bottom: vw(409, 1440);
+    padding-top: vw(102, 1440);
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    //z-index: -1;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 498px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../images/panorama.png");
+
+    @include max(xl) {
+      height: vw(498, 1440);
+    }
+  }
+
+  &__intro {
+    max-width: 870px;
+    margin: 0 auto 48px;
+    font-size: 34px;
+    line-height: 40px;
+    text-align: center;
+
+    @include max(xl) {
+      max-width: vw(870, 1440);
+      margin-bottom: vw(48, 1440);
+      font-size: vw(34, 1440);
+      line-height: vw(40, 1440);
+    }
+
+    span {
+      color: $green-06;
+    }
+  }
+
+  &__main {
+    position: relative;
+    z-index: 1;
+    max-width: 1065px;
+    margin: 0 auto;
+    font-size: 30px;
+    line-height: 40px;
+
+    @include max(xl) {
+      max-width: vw(1065, 1440);
+      font-size: vw(30, 1440);
+      line-height: vw(40, 1440);
+    }
+
+    p + p {
+      margin-top: 11px;
+
+      @include max(xl) {
+        margin-top: vw(11, 1440);
+      }
+    }
+  }
 }

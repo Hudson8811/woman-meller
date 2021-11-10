@@ -7,7 +7,8 @@ section.quiz
       label.quiz__field(aria-label="Ваше имя")
         input(type="text", name="name")
       
-      button.quiz__btn(type="button") Играть
+      button.quiz__btn(type="button") 
+        span Играть
     
     .quiz__main
       .question
@@ -19,3 +20,5 @@ section.quiz
           +custom-radio('answer', page.answers, 1, 'question__answers')
         .question__image 
           img(src="images/quiz/question-1.jpg", width="608", height="487", alt="")
+      .quiz__control
+        button.quiz__next(type="button") Дальше

@@ -1,48 +1,32 @@
 .custom-radio {
   $self: &;
 
-  &--inline {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: -16px;
-
-    #{$self}__item {
-      margin-top: 16px;
-      margin-right: 20px;
-
-      &:last-child {
-        margin-right: 0;
-      }
-    }
-  }
-
   &__item {
     display: block;
     cursor: pointer;
 
     & + & {
-      margin-top: 16px;
+      margin-top: 0;
     }
 
     @include hover {
       #{$self}__text {
         &::before {
-          border-color: $blue;
+          border-color: $green-84;
         }
       }
     }
 
     input:focus ~ #{$self}__text {
       &::before {
-        border-color: $blue;
+        border-color: $green-84;
       }
     }
 
     input:checked ~ #{$self}__text {
       &::before {
-        border-color: $blue;
-        background-color: $blue;
-        box-shadow: inset 0 0 0 2px $white;
+        border-color: $green-84;
+        background-color: $green-84;
       }
     }
   }
@@ -51,22 +35,34 @@
     position: relative;
     display: inline-block;
     vertical-align: top;
-    padding-left: 30px;
+    padding-left: 50px;
 
-    font-size: 15px;
-    line-height: 1.2;
-    color: $dark;
+    font-size: 20px;
+    line-height: 42px;
+    color: $black;
+
+    @include max(xl) {
+      padding-left: vw(50, 1440);
+      font-size: vw(20, 1440);
+      line-height: vw(42, 1440);
+    }
 
     &::before {
       content: "";
       position: absolute;
-      top: -1px;
+      top: 11px;
       left: 0;
-      width: 20px;
-      height: 20px;
+      width: 25px;
+      height: 25px;
       border-radius: 50%;
-      border: solid 1px $gray;
-      transition: border-color 0.3s ease;
+      border: solid 1px $black;
+      transition: border-color 0.3s ease, background-color 0.3s ease;
+
+      @include max(xl) {
+        top: vw(11, 1440);
+        width: vw(25, 1440);
+        height: vw(25, 1440);
+      }
     }
   }
 }

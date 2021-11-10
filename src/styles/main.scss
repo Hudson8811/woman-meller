@@ -12,11 +12,14 @@
 @import "partials/main";
 
 /* blocks */
-@import "blocks/title";
+//@import "blocks/title";
+@import "blocks/custom-radio";
+@import "blocks/question";
 //@import "blocks/social";
 @import "blocks/hero";
 @import "blocks/intro";
 @import "blocks/quiz";
+@import "blocks/result";
 
 /* components */
 @import "partials/header";

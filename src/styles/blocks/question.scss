@@ -1,0 +1,79 @@
+.question {
+  display: flex;
+  //flex-wrap: wrap;
+
+  &__main {
+    max-width: 545px;
+    margin-right: 32px;
+    padding-top: 17px;
+    padding-right: 42px;
+    padding-bottom: 65px;
+    flex-shrink: 0;
+
+    @include max(xl) {
+      max-width: vw(545, 1440);
+      margin-right: vw(32, 1440);
+      padding-top: vw(17, 1440);
+      padding-right: vw(42, 1440);
+      padding-bottom: vw(65, 1440);
+    }
+  }
+
+  &__title {
+    display: flex;
+    margin-bottom: 51px;
+
+    @include max(xl) {
+      margin-bottom: vw(51, 1440);
+    }
+
+    &-number {
+      width: 80px;
+      font-size: 144px;
+      line-height: 1;
+      color: $gold;
+      align-self: center;
+
+      @include max(xl) {
+        width: vw(80, 1440);
+        font-size: vw(144, 1440);
+      }
+    }
+
+    &-text {
+      font-size: 40px;
+      line-height: 1;
+      color: $green-06;
+      align-self: center;
+
+      @include max(xl) {
+        font-size: vw(40, 1440);
+      }
+    }
+  }
+
+  &__answers {
+    padding-left: 35px;
+
+    @include max(xl) {
+      padding-left: vw(35, 1440);
+    }
+  }
+
+  &__image {
+    width: 100%;
+    max-width: 608px;
+    flex-shrink: 0;
+
+    @include max(xl) {
+      max-width: vw(608, 1440);
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

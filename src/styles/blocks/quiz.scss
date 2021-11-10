@@ -1,3 +1,181 @@
 .quiz {
   $self: &;
+
+  padding: 32px 0 158px;
+
+  @include max(xl) {
+    padding: vw(32, 1440) 0 vw(158, 1440);
+  }
+
+  &__container {
+    max-width: 1010px;
+
+    @include max(xl) {
+      max-width: vw(1010, 1440);
+    }
+  }
+
+  &__intro {
+    margin-bottom: 27px;
+    padding-left: 38px;
+
+    font-size: 33px;
+    line-height: 35px;
+    color: $green-06;
+
+    @include max(xl) {
+      margin-bottom: vw(27, 1440);
+      padding-left: vw(38, 1440);
+      font-size: vw(33, 1440);
+      line-height: vw(35, 1440);
+    }
+  }
+
+  &__form {
+    margin-bottom: 112px;
+    padding-left: 38px;
+
+    @include max(xl) {
+      margin-bottom: vw(112, 1440);
+      padding-left: vw(38, 1440);
+    }
+  }
+
+  &__hint {
+    margin-bottom: 28px;
+    font-size: 30px;
+    line-height: 37px;
+    color: $green-06;
+
+    @include max(xl) {
+      margin-bottom: vw(28, 1440);
+      font-size: vw(30, 1440);
+      line-height: vw(37, 1440);
+    }
+  }
+
+  &__field {
+    display: block;
+    max-width: 460px;
+
+    @include max(xl) {
+      max-width: vw(460, 1440);
+    }
+
+    input {
+      display: block;
+      width: 100%;
+      padding: 22px 36px;
+      font-size: 24px;
+      line-height: 1;
+      color: $black;
+      border: solid 1px $dark;
+      background-color: $white;
+
+      appearance: none;
+      transition: border-color 0.3s ease;
+
+      outline: none;
+
+      @include max(xl) {
+        padding: vw(22, 1440) vw(36, 1440);
+        font-size: vw(24, 1440);
+      }
+
+      &:focus,
+      &:hover {
+        border-color: $green-84;
+      }
+    }
+  }
+
+  &__btn {
+    display: block;
+    width: 100%;
+    max-width: 733px;
+    margin-top: 42px;
+    padding: 19px 16px;
+    font-size: 30px;
+    line-height: 40px;
+    letter-spacing: 1em;
+    color: $cream;
+    font-weight: 200;
+    text-align: center;
+    text-transform: uppercase;
+
+    border: solid 4px $gold;
+    background-color: $green-06;
+    appearance: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    @include max(xl) {
+      max-width: vw(733, 1440);
+      margin-top: vw(42, 1440);
+      font-size: vw(30, 1440);
+      line-height: vw(40, 1440);
+      border-width: vw(4, 1440);
+    }
+
+    span {
+      margin-right: -1em;
+    }
+
+    @include hover {
+      background-color: $green-84; //lighten($green-06, 7%);
+    }
+
+    &:active {
+      opacity: 0.7;
+    }
+  }
+
+  &__main {
+    padding-left: 25px;
+
+    @include max(xl) {
+      padding-left: vw(25, 1440);
+    }
+  }
+
+  &__control {
+    width: calc(100% + 205px);
+    margin-top: -40px;
+    margin-left: 25px;
+    border-bottom: solid 4px $gold;
+
+    @include max(xl) {
+      width: calc(100% + 14.236vw);
+      margin-top: vw(-40, 1440);
+      margin-left: vw(25, 1440);
+      border-bottom-width: vw(4, 1440);
+    }
+  }
+
+  &__next {
+    display: inline-block;
+    vertical-align: top;
+    padding: 0;
+    font-size: 30px;
+    line-height: 40px;
+    color: $gold;
+    letter-spacing: 1em;
+    text-transform: uppercase;
+    border: none;
+    background-color: transparent;
+
+    appearance: none;
+    cursor: pointer;
+
+    transition: color 0.3s ease;
+
+    @include max(xl) {
+      font-size: vw(30, 1440);
+      line-height: vw(40, 1440);
+    }
+
+    @include hover {
+      color: $green-84; //darken($gold, 10%);
+    }
+  }
 }

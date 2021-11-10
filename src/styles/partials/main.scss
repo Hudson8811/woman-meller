@@ -2,38 +2,47 @@ html {
 }
 body {
   font-family: $mainFont;
-  font-size: 18px;
-  line-height: 21px;
-  font-weight: 500;
-  letter-spacing: 0.06em;
+  font-size: 20px;
+  line-height: 1.5;
+  font-weight: 400;
   color: $textMainColor;
   //background-color: $dark;
+  background-color: $light;
 
-  @include max(xxl) {
+  /*@include max(xxl) {
     font-size: vw(18);
     line-height: vw(21);
+  }*/
+
+  @include max(xl) {
+    font-size: vw(20, 1440);
   }
 
   @include max(sm) {
-    font-size: vw(16, 414);
-    line-height: vw(18, 414);
+    //font-size: vw(16, 414);
+    //line-height: vw(18, 414);
   }
 }
 
 .main {
+  padding-top: 13px;
   overflow: hidden;
+
+  @include max(xl) {
+    padding-top: vw(13, 1440);
+  }
 }
 
 .container {
   width: 100%;
-  max-width: 1400px;
+  max-width: 1410px;
   margin: 0 auto;
   padding: 0 15px;
 
-  @include max(xxl) {
+  /*@include max(xxl) {
     max-width: vw(1400);
     padding: 0 vw(15);
-  }
+  }*/
 
   @include max(sm) {
     max-width: none;

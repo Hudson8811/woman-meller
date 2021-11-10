@@ -1,8 +1,8 @@
 @font-face {
   font-family: "HelveticaNeueCyr";
   src: local("HelveticaNeueCyr-UltraLight"),
-    url("HelveticaNeueCyr-UltraLight.woff2") format("woff2"),
-    url("HelveticaNeueCyr-UltraLight.woff") format("woff");
+    url("../fonts/HelveticaNeueCyr-UltraLight.woff2") format("woff2"),
+    url("../fonts/HelveticaNeueCyr-UltraLight.woff") format("woff");
   font-weight: 200;
   font-style: normal;
   font-display: swap;
@@ -11,8 +11,8 @@
 @font-face {
   font-family: "HelveticaNeueCyr";
   src: local("HelveticaNeueCyr-Roman"),
-    url("HelveticaNeueCyr-Roman.woff2") format("woff2"),
-    url("HelveticaNeueCyr-Roman.ttf") format("woff");
+    url("../fonts/HelveticaNeueCyr-Roman.woff2") format("woff2"),
+    url("../fonts/HelveticaNeueCyr-Roman.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
