@@ -7,11 +7,19 @@
     padding: vw(32, 1440) 0 vw(158, 1440);
   }
 
+  @include max(sm) {
+    padding: vw(38, 375) 0 vw(62, 375);
+  }
+
   &__container {
     max-width: 1010px;
 
     @include max(xl) {
       max-width: vw(1010, 1440);
+    }
+
+    @include max(sm) {
+      max-width: none;
     }
   }
 
@@ -29,15 +37,33 @@
       font-size: vw(33, 1440);
       line-height: vw(35, 1440);
     }
+
+    @include max(sm) {
+      max-width: none;
+      width: vw(320, 375);
+      margin-bottom: vw(39, 375);
+      padding-left: 0;
+      font-size: vw(20, 375);
+      line-height: vw(25, 375);
+      text-align: left;
+      font-weight: 500;
+    }
   }
 
   &__form {
-    margin-bottom: 112px;
+    //margin-bottom: 112px;
     padding-left: 38px;
 
     @include max(xl) {
-      margin-bottom: vw(112, 1440);
+      //margin-bottom: vw(112, 1440);
       padding-left: vw(38, 1440);
+    }
+
+    @include max(sm) {
+      width: vw(350, 375);
+      margin-left: vw(-27, 375);
+      //margin-bottom: vw(39, 375);
+      padding-left: 0;
     }
   }
 
@@ -52,14 +78,31 @@
       font-size: vw(30, 1440);
       line-height: vw(37, 1440);
     }
+
+    @include max(sm) {
+      margin-bottom: vw(17, 375);
+      padding-left: 0;
+      font-size: vw(24, 375);
+      line-height: vw(25, 375);
+      text-align: center;
+
+      span {
+        display: block;
+      }
+    }
   }
 
   &__field {
+    $self: &;
     display: block;
     max-width: 460px;
 
     @include max(xl) {
       max-width: vw(460, 1440);
+    }
+
+    @include max(sm) {
+      max-width: none;
     }
 
     input {
@@ -82,9 +125,43 @@
         font-size: vw(24, 1440);
       }
 
+      @include max(sm) {
+        padding: vw(22, 375) vw(36, 375);
+        font-size: vw(24, 375);
+        text-align: center;
+      }
+
       &:focus,
       &:hover {
         border-color: $green-84;
+      }
+    }
+
+    &-message {
+      display: none;
+      position: absolute;
+    }
+
+    &.error {
+      input {
+        border-color: red;
+      }
+
+      #{$self}-message {
+        display: block;
+        padding: 4px 0;
+        font-size: 14px;
+        color: red;
+
+        @include max(xl) {
+          padding: vw(4, 1440) 0;
+          font-size: vw(14, 1440);
+        }
+
+        @include max(sm) {
+          padding: vw(4, 375) 0;
+          font-size: vw(14, 375);
+        }
       }
     }
   }
@@ -117,6 +194,14 @@
       border-width: vw(4, 1440);
     }
 
+    @include max(sm) {
+      max-width: none;
+      margin-top: vw(32, 375);
+      font-size: vw(24, 375);
+      line-height: vw(40, 375);
+      border-width: vw(4, 375);
+    }
+
     span {
       margin-right: -1em;
     }
@@ -130,11 +215,22 @@
     }
   }
 
+  &__form + &__main {
+    display: none;
+  }
+
   &__main {
+    padding-top: 40px;
     padding-left: 25px;
 
     @include max(xl) {
+      padding-top: vw(40, 1440);
       padding-left: vw(25, 1440);
+    }
+
+    @include max(sm) {
+      padding-top: vw(40, 375);
+      padding-left: 0;
     }
   }
 
@@ -149,6 +245,13 @@
       margin-top: vw(-40, 1440);
       margin-left: vw(25, 1440);
       border-bottom-width: vw(4, 1440);
+    }
+
+    @include max(sm) {
+      width: calc(100% + 12.8vw);
+      margin-top: vw(48, 375);
+      margin-left: vw(-9, 375);
+      border-bottom-width: vw(4, 375);
     }
   }
 
@@ -174,8 +277,17 @@
       line-height: vw(40, 1440);
     }
 
+    @include max(sm) {
+      font-size: vw(30, 375);
+      line-height: vw(40, 375);
+    }
+
     @include hover {
       color: $green-84; //darken($gold, 10%);
+    }
+
+    &:active {
+      opacity: 0.7;
     }
   }
 }

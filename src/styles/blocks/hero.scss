@@ -17,19 +17,31 @@
     background-position: 50% 0;
   }
 
-  /*@include max(sm) {
-    padding-top: vw(226, 414);
-    padding-bottom: vw(28, 414);
-    background-image: url("../images/hero/hero-bg-mobile.jpg");
+  @include max(sm) {
+    height: vw(665, 375);
+    padding-top: vw(95, 375);
+    border-bottom: none;
+    background-position: 76% 0;
+    background-image: url("../images/hero-mobile.jpg");
 
-    @include retina {
-      background-image: url("../images/hero/hero-bg-mobile@2x.jpg");
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: vw(4, 375);
+      background-color: $gold;
     }
-  }*/
+  }
 
   &__container {
     display: flex;
     flex-wrap: wrap;
+
+    @include max(sm) {
+      display: block;
+    }
   }
 
   &__title {
@@ -47,6 +59,13 @@
       font-size: vw(120, 1440);
     }
 
+    @include max(sm) {
+      max-width: vw(165, 375);
+      margin-right: vw(-6, 375);
+      font-size: vw(40, 375);
+      text-align: center;
+    }
+
     span {
       display: block;
       margin: -21px 0 -3px;
@@ -59,6 +78,11 @@
         margin: vw(-21, 1440) 0 vw(-3, 1440);
         font-size: vw(80, 1440);
       }
+
+      @include max(sm) {
+        margin: 0 0 vw(3, 375);
+        font-size: vw(30, 375);
+      }
     }
   }
 
@@ -67,6 +91,10 @@
     justify-content: center;
     width: 100%;
     margin-top: auto;
+
+    @include max(sm) {
+      display: none;
+    }
   }
 
   &__tag {
@@ -92,5 +120,26 @@
       padding: vw(22, 1440) vw(9, 1440) vw(16, 1440);
       font-size: vw(16, 1440);
     }
+  }
+
+  &__arrow {
+    position: absolute;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    svg {
+      display: block;
+      animation: shift 2s infinite ease;
+    }
+  }
+}
+
+@keyframes shift {
+  50% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
   }
 }

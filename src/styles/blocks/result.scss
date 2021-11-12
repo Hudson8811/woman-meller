@@ -1,48 +1,67 @@
 .result {
+  //padding-top: 180px;
   padding-bottom: 180px;
 
   @include max(xl) {
+    //padding-top: vw(180, 1440);
     padding-bottom: vw(180, 1440);
+  }
+
+  @include max(sm) {
+    //padding-top: vw(64, 375);
+    padding-bottom: vw(64, 375);
   }
 
   &__panorama {
     position: relative;
-    height: 686px;
-    margin-bottom: 57px;
 
-    background-color: $blue;
-
-    @include max(xl) {
-      height: vw(686, 1440);
-      margin-bottom: vw(57, 1440);
+    @include max(sm) {
+      height: auto;
+      margin-bottom: vw(32, 375);
     }
 
-    img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-  }
+    &-image {
+      overflow: hidden;
+      height: 686px;
+      margin-bottom: 57px;
+      background-color: $blue;
 
-  &__info {
-    position: absolute;
-    top: -100px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    max-width: 904px;
+      @include max(xl) {
+        height: vw(686, 1440);
+        margin-bottom: vw(57, 1440);
+      }
 
-    @include max(xl) {
-      top: vw(-100, 1440);
-      max-width: vw(904, 1440);
+      @include max(sm) {
+        margin-bottom: vw(40, 375);
+        height: vw(447, 375);
+      }
+
+      img {
+        display: block;
+
+        @include min(sm) {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+
+        @include max(sm) {
+          max-width: none;
+          width: auto;
+          height: 100%;
+          margin-left: vw(-240, 375);
+        }
+      }
     }
   }
 
   &__points {
+    position: absolute;
+    top: -100px;
+    left: calc((100% - 904px) / 2);
     width: 100%;
     max-width: 733px;
-    margin-bottom: 25px;
+    //margin-bottom: 25px;
     padding: 19px 16px 28px;
     font-size: 30px;
     line-height: 40px;
@@ -56,17 +75,36 @@
     background-color: $green-06;
 
     @include max(xl) {
+      left: calc((100% - 62.8vw) / 2);
       max-width: vw(733, 1440);
-      margin-bottom: vw(25, 1440);
+      //margin-bottom: vw(25, 1440);
       padding: vw(19, 1440) vw(16, 1440) vw(28, 1440);
       font-size: vw(30, 1440);
       line-height: vw(40, 1440);
       border-width: vw(4, 1440);
     }
 
+    @include max(sm) {
+      position: static;
+      max-width: none;
+      width: 100%;
+      padding: vw(19, 375) vw(16, 375) vw(28, 375);
+      font-size: vw(20, 375);
+      line-height: vw(30, 375);
+      border-width: vw(4, 375);
+      border-left: none;
+      border-right: none;
+    }
+
     span {
       display: block;
       margin-right: -1em;
+
+      &.big {
+        @include max(sm) {
+          font-size: vw(24, 375);
+        }
+      }
     }
 
     span + span {
@@ -79,6 +117,9 @@
   }
 
   &__appeal {
+    position: absolute;
+    top: 74px;
+    right: calc((100% - 904px) / 2);
     width: 590px;
     margin-left: auto;
     margin-right: -100px;
@@ -87,27 +128,67 @@
     text-transform: uppercase;
 
     @include max(xl) {
+      right: calc((100% - 62.8vw) / 2);
       width: vw(590, 1440);
       margin-right: vw(-100, 1440);
       font-size: vw(40, 1440);
+    }
+
+    @include max(sm) {
+      position: static;
+      width: 100%;
+      margin-right: 0;
+      padding: 0 vw(52, 375);
+      font-size: vw(24, 375);
+      line-height: vw(26, 375);
+      color: $green-06;
     }
   }
 
   &__main {
     max-width: 850px;
-    margin: 0 auto;
+    margin: 0 auto 0;
 
     @include max(xl) {
       max-width: vw(850, 1440);
     }
+
+    @include max(sm) {
+      max-width: none;
+      margin: 0;
+
+      padding: 0 vw(12, 375);
+
+      font-size: vw(20, 375);
+      line-height: vw(26, 375);
+    }
+
+    .green {
+      color: $green-06;
+    }
+
+    p + p {
+      margin-top: 16px;
+
+      @include max(xl) {
+        margin-top: vw(16, 1440);
+      }
+
+      @include max(sm) {
+        margin-top: vw(16, 375);
+      }
+    }
   }
 
-  &__green {
+  /*&__green {
     margin: 16px 0;
-    color: $green-06;
 
     @include max(xl) {
       margin: vw(16, 1440) 0;
     }
-  }
+
+    @include max(sm) {
+      margin: vw(24, 375) 0;
+    }
+  }*/
 }

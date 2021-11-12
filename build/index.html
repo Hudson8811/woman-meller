@@ -5,12 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <meta name="description" content="">
     <meta name="keywords" content="">
-    <link rel="prefetch prerender" href="images/quiz/result-1.jpg">
-    <link rel="prefetch prerender" href="images/quiz/result-1@2x.jpg">
-    <link rel="prefetch prerender" href="images/quiz/result-2.jpg">
-    <link rel="prefetch prerender" href="images/quiz/result-2@2x.jpg">
-    <link rel="prefetch prerender" href="images/quiz/result-3.jpg">
-    <link rel="prefetch prerender" href="images/quiz/result-3@2x.jpg">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="css/main.min.css" rel="stylesheet">
     <title>Жиры, которые нам нужны</title>
@@ -30,6 +24,11 @@
             <div class="hero__tag"><span>Игра</span></div>
             <div class="hero__tag"><span>Результат</span></div>
           </div>
+          <div class="hero__arrow"> 
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 330 330" width="40" height="40">
+              <path d="M325.607 79.393c-5.857-5.857-15.355-5.858-21.213.001l-139.39 139.393L25.607 79.393c-5.857-5.857-15.355-5.858-21.213.001-5.858 5.858-5.858 15.355 0 21.213l150.004 150a14.999 14.999 0 0021.212-.001l149.996-150c5.859-5.857 5.859-15.355.001-21.213z" fill="#ffffff"></path>
+            </svg>
+          </div>
         </div>
       </section>
       <section class="intro"> 
@@ -45,55 +44,16 @@
         <div class="quiz__container container"> 
           <div class="quiz__intro">Мы предлагаем вам проверить себя: насколько сбалансированно вы питаетесь и получаете ли необходимое количество Омега-3 с пищей? По итогам теста мы расскажем, какое количество Омега-3 необходимо именно вам и откуда вы можете их получить</div>
           <div class="quiz__form"> 
-            <div class="quiz__hint">Давайте познакомимся: как вас зовут?</div>
+            <div class="quiz__hint">Давайте познакомимся: <span>как вас зовут?</span></div>
             <label class="quiz__field" aria-label="Ваше имя">
-              <input type="text" name="name">
+              <input type="text" name="name"><span class="quiz__field-message"></span>
             </label>
             <button class="quiz__btn" type="button"> <span>Играть</span></button>
           </div>
-          <div class="quiz__main">
-            <div class="question">
-              <div class="question__main">
-                <div class="question__title"><span class="question__title-number">1</span><span class="question__title-text">Как вы можете оценить свой образ жизни?</span></div>
-                <div class="question__answers custom-radio">
-                  <label class="custom-radio__item">
-                    <input class="visually-hidden" type="radio" name="answer" value="1" checked><span class="custom-radio__text">A.	Сознательно веду здоровый образ жизни</span>
-                  </label>
-                  <label class="custom-radio__item">
-                    <input class="visually-hidden" type="radio" name="answer" value="2"><span class="custom-radio__text">B.	Стараюсь придерживаться правил ЗОЖ, но получается не всегда</span>
-                  </label>
-                  <label class="custom-radio__item">
-                    <input class="visually-hidden" type="radio" name="answer" value="3"><span class="custom-radio__text">C.	Не соблюдаю никакие нормы, живу так, как чувствую</span>
-                  </label>
-                </div>
-              </div>
-              <div class="question__image"> <img src="images/quiz/question-1.jpg" width="608" height="487" alt=""></div>
-            </div>
-            <div class="quiz__control">
-              <button class="quiz__next" type="button">Дальше</button>
-            </div>
-          </div>
+          <div class="quiz__main"></div>
         </div>
       </section>
-      <section class="result">
-        <div class="result__panorama"><img src="images/quiz/result-1.jpg" width="1440" height="686" alt="">
-          <div class="result__info">
-            <div class="result__points"><span>Ваш результат</span><span>2 балла</span></div>
-            <div class="result__appeal">Ольга, <br>вы гуру здорового питания и образа жизни!</div>
-          </div>
-        </div>
-        <div class="container">
-          <div class="result__main"> 
-            <p>Поздравляем, вашему умению заботиться о себе можно только позавидовать. Вы знаете, как найти баланс между делами и отдыхом, умеете восстанавливать свои ресурсы и наверняка хорошо спите, и правильно питаетесь. Но вам следует уделить больше внимания Омега-3 в вашем рационе.</p>
-            <div class="result__green">
-              <p>Именно Омега-3 помогают поддерживать работу иммунной и эндокринной систем, процессы метаболизма, состояние кожи и волос, укреплять здоровье в целом и быть более активным и продуктивным! По данным ВОЗ оптимальная суточная норма Омега-3 кислот для взрослых составляет 1000 мг в день.</p>
-              <p>Хорошими источниками Омега-3 может стать рыба жирных сортов (палтус, скумбрия и т.д.) и морепродукты, употреблять которые нужно 2-3 раза в неделю. Если это для вас не очень удобно, то хорошим решением может стать добавка к пище! </p>
-              <p>Рекомендуем выбирать высококачественные добавки Омега-3, с высоким содержанием кислот, дополненных витаминами А, Д, Е, которые не содержат консервантов и красителей и сделаны норвежским производителем. Обратите внимание на натуральный источник Омега-3 в виде рыбьего жира. </p>
-            </div>
-            <p>Именно Омега-3 жирные кислоты могут стать финальным «кирпичиком» в вашей крепости заботы о себе и своем организме!</p>
-          </div>
-        </div>
-      </section>
+      <!--include ../modules/result-->
     </main>
     <footer class="footer"><img src="images/banner.jpg" width="1440" height="417" alt=""></footer>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

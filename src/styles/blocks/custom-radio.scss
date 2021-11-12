@@ -47,6 +47,12 @@
       line-height: vw(42, 1440);
     }
 
+    @include max(sm) {
+      padding-left: vw(50, 375);
+      font-size: vw(20, 375);
+      line-height: vw(42, 375);
+    }
+
     &::before {
       content: "";
       position: absolute;
@@ -62,6 +68,12 @@
         top: vw(11, 1440);
         width: vw(25, 1440);
         height: vw(25, 1440);
+      }
+
+      @include max(sm) {
+        top: vw(11, 375);
+        width: vw(25, 375);
+        height: vw(25, 375);
       }
     }
   }

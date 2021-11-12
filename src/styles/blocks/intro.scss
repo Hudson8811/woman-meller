@@ -8,6 +8,11 @@
     padding-top: vw(102, 1440);
   }
 
+  @include max(sm) {
+    padding-bottom: vw(392, 375);
+    padding-top: vw(43, 375);
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -23,6 +28,13 @@
     @include max(xl) {
       height: vw(498, 1440);
     }
+
+    @include max(sm) {
+      height: vw(358, 375);
+      background-size: auto 100%;
+      background-position: 76% 0;
+      background-image: url("../images/panorama-mobile.png");
+    }
   }
 
   &__intro {
@@ -37,6 +49,15 @@
       margin-bottom: vw(48, 1440);
       font-size: vw(34, 1440);
       line-height: vw(40, 1440);
+    }
+
+    @include max(sm) {
+      max-width: none;
+      width: vw(320, 375);
+      margin-bottom: vw(44, 375);
+      font-size: vw(18, 375);
+      line-height: vw(24, 375);
+      text-align: left;
     }
 
     span {
@@ -58,11 +79,23 @@
       line-height: vw(40, 1440);
     }
 
+    @include max(sm) {
+      max-width: none;
+      width: vw(320, 375);
+      margin: 0;
+      font-size: vw(18, 375);
+      line-height: vw(24, 375);
+    }
+
     p + p {
       margin-top: 11px;
 
       @include max(xl) {
         margin-top: vw(11, 1440);
+      }
+
+      @include max(sm) {
+        margin-top: vw(41, 375);
       }
     }
   }

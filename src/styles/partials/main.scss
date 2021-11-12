@@ -31,6 +31,10 @@ body {
   @include max(xl) {
     padding-top: vw(13, 1440);
   }
+
+  @include max(sm) {
+    padding-top: vw(43, 375);
+  }
 }
 
 .container {
@@ -46,7 +50,7 @@ body {
 
   @include max(sm) {
     max-width: none;
-    padding: 0 vw(20, 414);
+    padding: 0 vw(40, 375);
   }
 }
 

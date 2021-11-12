@@ -19,20 +19,34 @@
   }
 
   @include max(sm) {
-    //padding-top: vw(29, 414);
-  }
-
-  &__container {
-    /*@include max(xxl) {
-      max-width: vw(1824);
-    }*/
+    height: vw(110, 375);
+    background-position: left 46% bottom 0;
+    background-size: vw(1233, 375) vw(150, 375);
+    padding-top: vw(52, 375);
   }
 
   &__logo {
-    margin-left: 147px;
+    margin-left: 132px;
 
     @include max(xl) {
-      margin-left: vw(147, 1440);
+      margin-left: vw(132, 1440);
+    }
+
+    @include max(sm) {
+      margin-left: vw(-16, 375);
+    }
+
+    img {
+      display: block;
+
+      @include max(xl) {
+        width: vw(255, 1440);
+        height: auto;
+      }
+
+      @include max(sm) {
+        width: vw(103, 375);
+      }
     }
   }
 }
