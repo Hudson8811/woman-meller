@@ -3,9 +3,9 @@ section.hero
     h1.hero__title(data-aos="fade-left") Жиры, <span>которые нам </span>нужны
     
     .hero__tags(data-aos="fade-in")
-      each it in ['Про рыбий жир', 'Игра', 'Результат']
-        .hero__tag
-          span= it
+      each it in [{text: 'Про рыбий жир', href: 'about'}, {text: 'Игра', href: 'game'}]
+        a.hero__tag(href= '#' + it.href)
+          span= it.text
     
     .hero__arrow(data-aos="fade-in")
       svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 330 330", width="40", height="40")

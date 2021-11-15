@@ -108,7 +108,17 @@
     letter-spacing: 0.7em;
     text-align: center;
     text-transform: uppercase;
+    text-decoration: none;
     background-color: rgba($gold, 0.7);
+    transition: background-color 0.3s ease;
+
+    @include hover {
+      background-color: $gold;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
 
     span {
       margin-right: -0.7em;

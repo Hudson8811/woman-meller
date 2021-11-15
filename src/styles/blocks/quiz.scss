@@ -283,6 +283,10 @@
 
     transition: color 0.3s ease;
 
+    &[disabled] {
+      opacity: 0;
+    }
+
     @include max(xl) {
       font-size: vw(30, 1440);
       line-height: vw(40, 1440);

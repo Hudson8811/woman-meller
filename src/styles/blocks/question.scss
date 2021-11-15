@@ -1,4 +1,5 @@
 .question {
+  $self: &;
   display: flex;
   //flex-wrap: wrap;
   display: grid;
@@ -12,6 +13,16 @@
   @include max(sm) {
     display: flex;
     flex-direction: column;
+  }
+
+  &.is-image-not-load {
+    #{$self}__image {
+      //background-color: lightgray;
+      background-repeat: no-repeat;
+      background-size: scale-down;
+      background-position: 50% 50%;
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg fill='%23ccc' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 50'%3e%3cpath d='M0 4v42h50V4Zm2 2h46v38H2Zm2 2v22.781a1.016 1.016 0 0 0 0 .407V42h42v-4.844a1.016 1.016 0 0 0 0-.406V8Zm2 2h38v24.563l-9.281-9.282a1.009 1.009 0 0 0-.844-.281 1.008 1.008 0 0 0-.594.281l-4.25 4.25L18.75 18.313a1 1 0 0 0-.906-.313c-.2.027-.383.117-.532.25L6 28.688Zm29 5a3 3 0 1 0 .002 6.002A3 3 0 0 0 35 15Zm-17.063 5.438 9.657 10.53-2.313 2.313a1.014 1.014 0 0 0 0 1.438c.399.398 1.04.398 1.438 0l2.843-2.875c.141-.086.258-.203.344-.344L34 27.437l10 10V40H6v-8.531Z'/%3e%3c/svg%3e");
+    }
   }
 
   /*&__main {
