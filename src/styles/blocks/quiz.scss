@@ -13,6 +13,7 @@
   }
 
   &__container {
+    position: relative;
     max-width: 1010px;
 
     @include max(xl) {
@@ -248,12 +249,14 @@
 
   &__control {
     width: calc(100% + 205px);
+    max-width: 1160px;
     margin-top: -40px;
     margin-left: 25px;
     border-bottom: solid 4px $gold;
 
     @include max(xl) {
       width: calc(100% + 14.236vw);
+      max-width: vw(1160, 1440);
       margin-top: vw(-40, 1440);
       margin-left: vw(25, 1440);
       border-bottom-width: vw(4, 1440);
