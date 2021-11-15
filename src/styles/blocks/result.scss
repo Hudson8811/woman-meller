@@ -147,15 +147,16 @@
 
   &__main {
     max-width: 850px;
-    margin: 0 auto 0;
+    margin: 0 auto 110px;
 
     @include max(xl) {
       max-width: vw(850, 1440);
+      margin-bottom: vw(110, 1440);
     }
 
     @include max(sm) {
       max-width: none;
-      margin: 0;
+      margin: 0 0 vw(110, 375);
 
       padding: 0 vw(12, 375);
 
@@ -177,6 +178,17 @@
       @include max(sm) {
         margin-top: vw(16, 375);
       }
+    }
+  }
+
+  .social {
+    margin-top: -46px;
+
+    @include max(xl) {
+      margin-top: vw(-46, 1440);
+    }
+    @include max(sm) {
+      margin-top: vw(-46, 375);
     }
   }
 

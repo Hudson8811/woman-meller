@@ -2,14 +2,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 -5px;
+  flex-wrap: wrap;
 
-  @include max(xxl) {
-    margin: 0 vw(-5);
-  }
-
-  @include max(sm) {
-    margin: 0 vw(-5, 414);
+  &__title {
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 20px;
+    line-height: 1;
+    text-align: center;
   }
 
   &__item {
@@ -19,14 +19,14 @@
     text-decoration: none;
     width: 46px;
     height: 46px;
-    border: 1px solid $green-52;
+    border: 1px solid $green-05;
     box-sizing: border-box;
     border-radius: 50%;
     margin: 0 5px;
-    color: $green-52;
+    color: $green-05;
     transition: 0.2s linear;
 
-    @include max(xxl) {
+    @include max(xl) {
       margin: 0 vw(5);
       width: vw(46);
       height: vw(46);
@@ -44,7 +44,7 @@
       display: block;
       object-fit: contain;
 
-      @include max(xxl) {
+      @include max(xl) {
         width: vw(24);
         height: vw(24);
       }
@@ -58,7 +58,7 @@
     @include min(md) {
       &:hover {
         color: #ffffff;
-        background: $green-52;
+        background: $green-05;
       }
     }
   }
