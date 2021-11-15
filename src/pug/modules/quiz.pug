@@ -1,15 +1,16 @@
 section.quiz
-  .quiz__container.container 
-    .quiz__intro Мы предлагаем вам проверить себя: насколько сбалансированно вы питаетесь и получаете ли необходимое количество Омега-3 с пищей? По итогам теста мы расскажем, какое количество Омега-3 необходимо именно вам и откуда вы можете их получить
+  .quiz__container.container
+    .quiz__info
+      .quiz__intro(data-aos="fade-up") Мы предлагаем вам проверить себя: насколько сбалансированно вы питаетесь и получаете ли необходимое количество Омега-3 с пищей? По итогам теста мы расскажем, какое количество Омега-3 необходимо именно вам и откуда вы можете их получить.
 
-    .quiz__form 
-      .quiz__hint Давайте познакомимся: <span>как вас зовут?</span>
-      label.quiz__field(aria-label="Ваше имя")
-        input(type="text", name="name")
-        span.quiz__field-message
-      
-      button.quiz__btn(type="button") 
-        span Играть
+      .quiz__form 
+        .quiz__hint(data-aos="fade-up") Давайте познакомимся: <span>как вас зовут?</span>
+        label.quiz__field(aria-label="Ваше имя", data-aos="fade-up")
+          input(type="text", name="name")
+          span.quiz__field-message
+        div(data-aos="fade-up")
+          button.quiz__btn(type="button")
+            span Играть
     
     .quiz__main
       //-.question

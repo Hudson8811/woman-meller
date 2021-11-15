@@ -24,6 +24,7 @@
   }
 
   &__intro {
+    width: calc(100% + 38px);
     margin-bottom: 27px;
     padding-left: 38px;
 
@@ -32,6 +33,7 @@
     color: $green-06;
 
     @include max(xl) {
+      width: calc(100% + 2.638888888888889vw);
       margin-bottom: vw(27, 1440);
       padding-left: vw(38, 1440);
       font-size: vw(33, 1440);
@@ -72,6 +74,8 @@
     font-size: 30px;
     line-height: 37px;
     color: $green-06;
+
+    letter-spacing: -0.018em;
 
     @include max(xl) {
       margin-bottom: vw(28, 1440);
@@ -215,11 +219,14 @@
     }
   }
 
-  &__form + &__main {
-    display: none;
+  &__info + &__main {
+    position: absolute;
+
+    pointer-events: none;
   }
 
   &__main {
+    opacity: 0;
     padding-top: 40px;
     padding-left: 25px;
 
@@ -231,6 +238,10 @@
     @include max(sm) {
       padding-top: vw(40, 375);
       padding-left: 0;
+    }
+
+    &.is-absolute {
+      position: absolute;
     }
   }
 

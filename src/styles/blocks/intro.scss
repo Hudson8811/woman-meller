@@ -38,20 +38,25 @@
   }
 
   &__intro {
-    max-width: 870px;
+    position: relative;
+    left: 50px;
+    max-width: 860px;
     margin: 0 auto 48px;
     font-size: 34px;
     line-height: 40px;
     text-align: center;
+    letter-spacing: -0.018em;
 
     @include max(xl) {
-      max-width: vw(870, 1440);
+      left: vw(50, 1440);
+      max-width: vw(860, 1440);
       margin-bottom: vw(48, 1440);
       font-size: vw(34, 1440);
       line-height: vw(40, 1440);
     }
 
     @include max(sm) {
+      left: 0;
       max-width: none;
       width: vw(320, 375);
       margin-bottom: vw(44, 375);
@@ -67,19 +72,25 @@
 
   &__main {
     position: relative;
+    left: 80px;
     z-index: 1;
     max-width: 1065px;
     margin: 0 auto;
+    padding-right: 19px;
     font-size: 30px;
     line-height: 40px;
 
+    letter-spacing: -0.018em;
+
     @include max(xl) {
+      left: vw(80, 1440);
       max-width: vw(1065, 1440);
       font-size: vw(30, 1440);
       line-height: vw(40, 1440);
     }
 
     @include max(sm) {
+      left: 0;
       max-width: none;
       width: vw(320, 375);
       margin: 0;

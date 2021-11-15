@@ -18,8 +18,7 @@ html(lang="ru")
 
 	body
 		block header
-			if !page.isQuiz
-				include ../partials/_header
+			include ../partials/_header
 
 		main.main
 			block main
@@ -29,6 +28,7 @@ html(lang="ru")
 
 		block modals
 
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js")
 		script(src="https://unpkg.com/aos@2.3.1/dist/aos.js")
 		script(src="js/main.min.js")
 
