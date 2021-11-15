@@ -2,6 +2,7 @@
   $self: &;
 
   padding: 32px 0 158px;
+  overflow: hidden;
 
   @include max(xl) {
     padding: vw(32, 1440) 0 vw(158, 1440);
@@ -285,6 +286,7 @@
 
     &[disabled] {
       opacity: 0;
+      cursor: default;
     }
 
     @include max(xl) {

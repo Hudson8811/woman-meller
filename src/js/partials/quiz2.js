@@ -237,7 +237,7 @@ window.addEventListener('DOMContentLoaded', ()=> {
               image.onerror = () => {
                 resolve(false);
               }
-              image.src = `images/quiz/result0-${result.image}.jpg`;
+              image.src = `images/quiz/result-${result.image}.jpg`;
             }),
             new Promise((resolve, reject) => {
               const image = new Image();
@@ -247,7 +247,7 @@ window.addEventListener('DOMContentLoaded', ()=> {
               image.onerror = () => {
                 resolve(false);
               }
-              image.src = `images/quiz/result0-mobile-${result.image}.jpg`;
+              image.src = `images/quiz/result-mobile-${result.image}.jpg`;
             })
           ]);
         })

@@ -56,7 +56,7 @@
     &::before {
       content: "";
       position: absolute;
-      top: 11px;
+      top: 9px;
       left: 0;
       width: 25px;
       height: 25px;
@@ -65,13 +65,13 @@
       transition: border-color 0.3s ease, background-color 0.3s ease;
 
       @include max(xl) {
-        top: vw(11, 1440);
+        top: vw(9, 1440);
         width: vw(25, 1440);
         height: vw(25, 1440);
       }
 
       @include max(sm) {
-        top: vw(11, 375);
+        top: vw(9, 375);
         width: vw(25, 375);
         height: vw(25, 375);
       }
